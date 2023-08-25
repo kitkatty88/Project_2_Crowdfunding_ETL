@@ -17,6 +17,13 @@ CREATE TABLE campaign (
     subcategory_id VARCHAR(50)
 );
 
+ALTER TABLE campaign
+ADD FOREIGN KEY (contact_id) REFERENCES contacts(contact_id);
 
+ALTER TABLE campaign
+ADD FOREIGN KEY (category_id) REFERENCES categories(category_id);
+
+ALTER TABLE campaign
+ADD FOREIGN KEY (subcategory_id) REFERENCES subcategory(subcategory_id);
 
 SELECT * FROM campaign;
